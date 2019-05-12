@@ -17,4 +17,6 @@ read -p "1 - Да, 0 - Нет: " prog_set
 if [[ $prog_set == 1 ]]; then
   sudo pacman -S pamac-aur --noconfirm 
   gpg --keyserver pgp.mit.edu --recv-keys FC918B335044912E
-  
+  elif [[ $prog_set == 0 ]]; then
+  echo 'Установка программ пропущена.'
+fi
