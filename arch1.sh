@@ -47,7 +47,7 @@ mount /dev/sda1 /mnt
 
 
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
-echo "Server = http://mirror.mirohost.net/archlinux/\$repo/os/\$arch" /etc/pacman.d/mirrorlist
+echo "Server = http://mirror.mirohost.net/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 
 
 echo '3.2 Установка основных пакетов'
