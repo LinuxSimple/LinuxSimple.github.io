@@ -26,7 +26,7 @@ echo '2.4 создание разделов'
   echo;
   echo;
   echo;
-  echo +30G;
+  echo +10G;
 
 
   echo a;
@@ -46,7 +46,8 @@ mount /dev/sda1 /mnt
 
 
 
-
+echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
+echo "Server = http://mirror.mirohost.net/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 
 
 echo '3.2 Установка основных пакетов'
@@ -55,5 +56,4 @@ pacstrap /mnt base base-devel
 echo '3.3 Настройка системы'
 genfstab -pU /mnt >> /mnt/etc/fstab
 
-
-arch-chroot /mnt sh -c "$(curl -fsSL https://github.com/LinuxSimple/LinuxSimple.github.io/blob/master/arch2.sh)"
+arch-chroot /mnt sh -c "$(curl -fsSL git.io/arch2.sh)"
