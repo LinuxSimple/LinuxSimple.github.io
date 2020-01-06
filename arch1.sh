@@ -26,13 +26,7 @@ echo '2.4 создание разделов'
   echo;
   echo;
   echo;
-  echo +10G;
-  
-  echo n;
-  echo;
-  echo;
-  echo;
-  echo +10G;
+  echo +30G;
 
   echo w;
 ) | fdisk /dev/sda
@@ -42,11 +36,10 @@ fdisk -l
 
 echo '2.4.2 Форматирование дисков'
 mkfs.ext4  /dev/sda1 -L root
-mkfs.ext4 /dev/sda2 -L home
 
 echo '2.4.3 Монтирование дисков'
 mount /dev/sda1 /mnt
-mount /devsda2 /mnt
+
 
 
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
