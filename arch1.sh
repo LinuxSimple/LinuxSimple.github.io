@@ -24,7 +24,7 @@ echo;
 
 echo;
 
-echo +8G;
+echo +15G;
 
 echo w;
 
