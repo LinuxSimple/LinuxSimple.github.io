@@ -15,7 +15,7 @@ echo '2.4 создание разделов'
   echo;
   echo;
   echo;
-  echo +30G;
+  echo +10G;
 
   echo w;
 ) | fdisk /dev/sda
