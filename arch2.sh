@@ -69,7 +69,7 @@ if [[ $vm_setting == 1 ]]; then
 elif [[ $vm_setting == 2 ]]; then
   pacman -Sy plasma-meta kdebase --noconfirm
 elif [[ $vm_setting == 3 ]]; then  
-  pacman -S  konsole
+  pacman -S lxqt
 fi
 
 echo 'Какой ставим DM ?'
