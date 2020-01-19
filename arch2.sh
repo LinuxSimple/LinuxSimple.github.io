@@ -94,7 +94,7 @@ pacman -S $gui_install
 
 echo "Какое DE ставим?"
 
-read -p "1 - XFCE, 2 - KDE, 3 - Openbox: " vm_setting
+read -p "1 - XFCE, 2 - KDE, 3 - Lxqt: " vm_setting
 
 if [[ $vm_setting == 1 ]]; then
 
@@ -106,13 +106,13 @@ pacman -Sy plasma-meta kdebase --noconfirm
 
 elif [[ $vm_setting == 3 ]]; then
 
-pacman -S openbox xfce4-terminal
+pacman -S lxqt
 
 fi
 
 echo 'Какой ставим DM ?'
 
-read -p "1 - sddm (Для Openbox не ставить, нет выбора пользователя), 2 - lxdm: " dm_setting
+read -p "1 - sddm (Рекомендуется), 2 - lxdm: " dm_setting
 
 if [[ $dm_setting == 1 ]]; then
 
