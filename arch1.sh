@@ -34,7 +34,7 @@ echo;
 
 echo;
 
-echo +10G;
+echo +250G;
 
 echo w;
 
