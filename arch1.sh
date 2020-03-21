@@ -24,17 +24,7 @@ echo;
 
 echo;
 
-echo +20G;
-
-echo n;
-
-echo;
-
-echo;
-
-echo;
-
-echo +250G;
+echo +40G;
 
 echo w;
 
@@ -48,13 +38,9 @@ echo '2.4.2 Форматирование дисков'
 
 mkfs.ext4 /dev/sda1 -L root
 
-mkfs.ext4 /dev/sda2 -L home
-
 echo '2.4.3 Монтирование дисков'
 
 mount /dev/sda1 /mnt
-
-mount /dev/sda2 /mnt
 
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
