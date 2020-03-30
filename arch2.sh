@@ -94,7 +94,7 @@ pacman -S $gui_install
 
 echo "Какое DE ставим?"
 
-read -p "1 - XFCE, 2 - KDE, 3 - Gnome: " vm_setting
+read -p "1 - XFCE, 2 - KDE, 3 - lxqt: " vm_setting
 
 if [[ $vm_setting == 1 ]]; then
 
@@ -106,7 +106,7 @@ pacman -Sy plasma-meta kdebase --noconfirm
 
 elif [[ $vm_setting == 3 ]]; then
 
-pacman -S gnome
+pacman -S lxqt
 
 fi
 
