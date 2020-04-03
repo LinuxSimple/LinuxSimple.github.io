@@ -20,7 +20,7 @@ echo;
 
 echo;
 
-echo +100G;
+echo +20G;
 
 echo w;
 
