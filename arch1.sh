@@ -8,6 +8,8 @@ timedatectl set-ntp true
 
 echo '2.4 создание разделов'
 
+(
+
 echo o;
 
 echo n;
@@ -47,5 +49,3 @@ pacstrap /mnt base base-devel linux linux-firmware
 echo '3.3 Настройка системы'
 
 genfstab -pU /mnt >> /mnt/etc/fstab
-
-arch-chroot /mnt sh -c "$(curl -fsSL LinuxSimple.github.io/arch2.sh)"
