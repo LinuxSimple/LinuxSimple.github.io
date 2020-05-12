@@ -20,7 +20,7 @@ echo;
 
 echo;
 
-echo +30G;
+echo +20480Mb;
 
 echo w;
 
