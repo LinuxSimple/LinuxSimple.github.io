@@ -8,11 +8,11 @@ timedatectl set-ntp true
 
 echo '2.4.2 Форматирование дисков'
 
-mkfs.ext4 /dev/sda5 -L root
+mkfs.ext4 /dev/sda1 -L root
 
 echo '2.4.3 Монтирование дисков'
 
-mount /dev/sda5 /mnt
+mount /dev/sda1 /mnt
 
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
