@@ -6,6 +6,30 @@ echo '2.3 Синхронизация системных часов'
 
 timedatectl set-ntp true
 
+echo '2.4 создание разделов'
+
+(
+
+echo o;
+
+echo n;
+
+echo;
+
+echo;
+
+echo;
+
+echo +20G;
+
+echo w;
+
+) | fdisk /dev/sda
+
+echo 'Ваша разметка диска'
+
+fdisk -l
+
 echo '2.4.2 Форматирование дисков'
 
 mkfs.ext4 /dev/sda1 -L root
@@ -25,3 +49,5 @@ pacstrap /mnt base base-devel linux linux-firmware
 echo '3.3 Настройка системы'
 
 genfstab -pU /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt sh -c "$(curl -fsSL LinuxSimple.github.io/arch2.sh)"
