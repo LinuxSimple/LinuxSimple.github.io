@@ -90,4 +90,8 @@ pacman -S networkmanager network-manager-applet ppp --noconfirm
 
 echo 'Подключаем автозагрузку менеджера входа и интернет'
 systemctl enable NetworkManager
+
+echo 'Настраиваем звук'
+pacman -S pulseaudio --noconfirm
+pacman -S pavucontrol --noconfirm
 exit
