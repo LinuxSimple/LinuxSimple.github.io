@@ -20,7 +20,7 @@ echo;
 
 echo;
 
-echo +100%FREE;
+echo +50G;
 
 echo w;
 
