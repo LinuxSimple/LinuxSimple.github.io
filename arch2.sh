@@ -81,6 +81,7 @@ elif [[ $dm_setting == 2 ]]; then
   pacman -S lxdm --noconfirm
   systemctl enable lxdm
   pacman -S lightdm --noconfirm
+  systemctl enable lightdm
 fi
 
 echo 'Ставим шрифты'
