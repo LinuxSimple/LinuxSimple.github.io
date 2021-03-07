@@ -94,7 +94,7 @@ systemctl enable NetworkManager
 echo 'Настраиваем звук и необходимые программы'
 pacman -S pulseaudio --noconfirm
 pacman -S pavucontrol --noconfirm
-pacman -S konsole dolphin packagekit-qt5 htop nano ark p7zip unrar gvfs-mtp mtpfs xdg-user-dirs wget  noto-fonts-emoji --noconfirm
+pacman -S konsole dolphin packagekit-qt5 htop ffmpegthumbs nano ark p7zip unrar gvfs-mtp mtpfs xdg-user-dirs wget  noto-fonts-emoji --noconfirm
 
 echo 'Очистка кэша установленных пакетов'
 pacman -Scc --noconfirm
