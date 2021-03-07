@@ -48,9 +48,10 @@ mkfs.ext4 /dev/sda2
 
 echo '2.4.3 Монтирование дисков'
 
-mount /dev/sda1 /mnt/root
-
-mount /dev/sda2 /mnt/home
+mount /dev/sda1 /mnt
+mkdir /mnt/root
+mount /dev/sda2 /mnt
+mkdir /mnt/home
 
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
