@@ -48,7 +48,7 @@ mkfs.ext4 /dev/sda2 -home
 
 echo '2.4.3 Монтирование дисков'
 
-mount /dev/sda1 /mnt
+mount /dev/sda1 /mnt/root
 
 mount /dev/sda2 /mnt/home
 
