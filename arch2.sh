@@ -102,5 +102,7 @@ cd /tmp/yay_install
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -sir --needed --noconfirm --skippgpcheck
+echo 'Очистка кэша установленных пакетов'
+pacman -Scc --noconfirm
 echo 'CИСТЕМА УСТАНОВЛЕНА, ПЕРЕЗАГРУЗИТЕ КОМПЬЮТЕР'
 exit
