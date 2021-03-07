@@ -94,14 +94,8 @@ systemctl enable NetworkManager
 echo 'Настраиваем звук и необходимые программы'
 pacman -S pulseaudio --noconfirm
 pacman -S pavucontrol --noconfirm
-pacman -S konsole dolphin packagekit-qt5 htop nano ark p7zip unrar gvfs-mtp mtpfs xdg-user-dirs wget ttf-dejavu noto-fonts-emoji --noconfirm
+pacman -S konsole dolphin packagekit-qt5 htop nano ark p7zip unrar gvfs-mtp mtpfs xdg-user-dirs wget  noto-fonts-emoji --noconfirm
 
-echo 'Установка AUR (yay)'
-mkdir -p /tmp/yay_install
-cd /tmp/yay_install
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -sir --needed --noconfirm --skippgpcheck
 echo 'Очистка кэша установленных пакетов'
 pacman -Scc --noconfirm
 echo 'CИСТЕМА УСТАНОВЛЕНА, ПЕРЕЗАГРУЗИТЕ КОМПЬЮТЕР'
