@@ -42,17 +42,16 @@ fdisk -l
 
 echo '2.4.2 Форматирование дисков'
 
-mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda1 -L root
 
-mkfs.ext4 /dev/sda2
+mkfs.ext4 /dev/sda2 -L home
 
 echo '2.4.3 Монтирование дисков'
 
 mount /dev/sda1 /mnt
-mkdir /mnt/boot
-mount /dev/sda2 /mnt
-mkdir /mnt/home
-
+mkdir /mnt/{boot,home}
+mount /dev/sda1 /mnt/boot
+mount /dev/sda2 /mnt/home
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
 echo "Server = http://mirror.mirohost.net/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
