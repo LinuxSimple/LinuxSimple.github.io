@@ -96,7 +96,5 @@ pacman -S pulseaudio --noconfirm
 pacman -S pavucontrol --noconfirm
 pacman -S konsole dolphin packagekit-qt5 htop kate ffmpegthumbs nano ark p7zip unrar gvfs-mtp mtpfs xdg-user-dirs wget git noto-fonts-emoji --noconfirm
 
-echo 'Очистка кэша установленных пакетов'
-pacman -Scc --noconfirm
 echo 'CИСТЕМА УСТАНОВЛЕНА, ПЕРЕЗАГРУЗИТЕ КОМПЬЮТЕР'
 exit
