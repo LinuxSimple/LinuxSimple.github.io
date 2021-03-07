@@ -94,7 +94,7 @@ systemctl enable NetworkManager
 echo 'Настраиваем звук и необходимые программы'
 pacman -S pulseaudio --noconfirm
 pacman -S pavucontrol --noconfirm
-pacman -S konsole dolphin packagekit-qt5 htop ark p7zip unrar gvfs-mtp mtpfs xdg-user-dirs wget ttf-dejavu noto-fonts-emoji --noconfirm
+pacman -S konsole dolphin packagekit-qt5 htop nano ark p7zip unrar gvfs-mtp mtpfs xdg-user-dirs wget ttf-dejavu noto-fonts-emoji --noconfirm
 
 echo 'Установка AUR (yay)'
 mkdir -p /tmp/yay_install
