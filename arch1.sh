@@ -50,13 +50,15 @@ echo '2.4.3 Монтирование дисков'
 
 mount /dev/sda1 /mnt
 
+mount /dev/sda2 /mnt/home
+
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
 echo "Server = http://mirror.mirohost.net/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 
 echo '3.2 Установка основных пакетов'
 
-pacstrap /mnt base base-devel linux linux-firmware
+pacstrap /mnt base base-devel linux54 linux-firmware
 
 echo '3.3 Настройка системы'
 
