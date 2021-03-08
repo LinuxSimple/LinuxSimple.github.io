@@ -50,6 +50,7 @@ echo '2.4.3 Монтирование дисков'
 
 mount /dev/sda1 /mnt
 mount /dev/sda1 /mnt/root
+mkdir /mnt/home
 mount /dev/sda2 /mnt/home
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
