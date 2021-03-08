@@ -20,7 +20,7 @@ echo;
 
 echo;
 
-echo +10240 Mb;
+echo +10G;
 
 echo n;
 
@@ -30,7 +30,7 @@ echo;
 
 echo;
 
-echo +10240 Mb;
+echo +40G;
 
 echo w;
 
