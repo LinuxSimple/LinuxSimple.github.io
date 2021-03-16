@@ -94,7 +94,7 @@ systemctl enable NetworkManager
 echo 'Настраиваем звук и необходимые программы'
 pacman -S pulseaudio --noconfirm
 pacman -S pavucontrol --noconfirm
-pacman -S konsole dolphin packagekit-qt5 htop kate ffmpegthumbs nano ark p7zip unrar xdg-user-dirs wget git noto-fonts-emoji --noconfirm
+pacman -S konsole htop ffmpegthumbs nano ark p7zip unrar wget git noto-fonts-emoji --noconfirm
 
 echo 'CИСТЕМА УСТАНОВЛЕНА, ПЕРЕЗАГРУЗИТЕ КОМПЬЮТЕР'
 exit
