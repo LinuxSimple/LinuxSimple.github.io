@@ -20,17 +20,7 @@ echo;
 
 echo;
 
-echo +12G;
-
-echo n;
-
-echo;
-
-echo;
-
-echo;
-
-echo +40G;
+echo +50G;
 
 echo w;
 
@@ -44,14 +34,10 @@ echo '2.4.2 Форматирование дисков'
 
 mkfs.ext4 /dev/sda1 -L root
 
-mkfs.ext4 /dev/sda2 -L home
-
 echo '2.4.3 Монтирование дисков'
 
 mount /dev/sda1 /mnt
-mount /dev/sda1 /mnt/root
-mkdir /mnt/home
-mount /dev/sda2 /mnt/home
+
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
 echo "Server = http://mirror.mirohost.net/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
