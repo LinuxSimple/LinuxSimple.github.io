@@ -32,12 +32,18 @@ fdisk -l
 
 echo '2.4.2 Форматирование дисков'
 
-mkfs.ext4 /dev/sda1 -L root
+mkfs.btrfs /dev/sda1
+mkfs.btrfs -L "root" /dev/sda1
 
 echo '2.4.3 Монтирование дисков'
 
 mount /dev/sda1 /mnt
-
+btrfs subvolume create /mnt/@
+btrfs subvolume create /mnt/@home
+umount /mnt
+mount -o subvol=@,compress=zstd /dev/sda1 /mnt
+mkdir /mnt/home
+mount -o subvol=@home,compress=zstd /dev/sda1 /mnt/home
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
 echo "Server = http://mirror.mirohost.net/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
