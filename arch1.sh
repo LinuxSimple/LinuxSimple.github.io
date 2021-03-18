@@ -32,11 +32,22 @@ fdisk -l
 
 echo '2.4.2 Форматирование дисков'
 
-mkfs.ext4 /dev/sda1 -L root
+mkfs.btrfs /dev/sda1 -L root
 
 echo '2.4.3 Монтирование дисков'
 
-mount /dev/sda1 /mnt
+mkdir /mnt/btrfs-root
+mount -o defaults,relatime,discard,ssd,nodev,nosuid /dev/sda1 /mnt/btrfs-root
+
+mkdir -p /mnt/btrfs/__snapshot
+mkdir -p /mnt/btrfs/__current
+btrfs subvolume create /mnt/btrfs-root/__current/root
+btrfs subvolume create /mnt/btrfs-root/__current/home
+mkdir -p /mnt/btrfs-current
+mount -o defaults,relatime,discard,ssd,nodev,subvol=__current/root /dev/sda1 /mnt/btrfs-current
+mkdir -p /mnt/btrfs-current/home
+mount -o defaults,relatime,discard,ssd,nodev,nosuid,subvol=__current/home /dev/sda1 /mnt/btrfs-current/home
+
 
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
@@ -48,6 +59,6 @@ pacstrap /mnt base base-devel linux-lts linux-firmware
 
 echo '3.3 Настройка системы'
 
-genfstab -pU /mnt >> /mnt/etc/fstab
+genfstab -U -p /mnt/btrfs-current >> /mnt/btrfs-current/etc/fstab
 
 arch-chroot /mnt sh -c "$(curl -fsSL LinuxSimple.github.io/arch2.sh)"
