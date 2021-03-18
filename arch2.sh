@@ -73,7 +73,7 @@ elif [[ $vm_setting == 3 ]]; then
 elif [[ $vm_setting == 4 ]]; then
  pacman -S deepin deepin-extra
 elif [[ $vm_setting == 5 ]]; then
- pacman -S gnome gnome-extra
+ pacman -S gnome gnome-extra xdg-user-dirs
 elif [[ $vm_setting == 6 ]]; then
  pacman -S cinnamon cinnamon-translations gnome-terminal xdg-user-dirs
 fi
