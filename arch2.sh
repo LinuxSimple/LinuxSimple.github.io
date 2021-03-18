@@ -63,13 +63,19 @@ echo 'Ставим иксы и драйвера'
 pacman -S $gui_install
 
 echo "Какое DE ставим?"
-read -p "1 - XFCE, 2 - KDE, 3 - Lxqt: " vm_setting
+read -p "1 - XFCE, 2 - KDE, 3 - Lxqt, 4 - deepin, 5 - gnome 6 - cinnamon: " vm_setting
 if [[ $vm_setting == 1 ]]; then
   pacman -S xfce4 xfce4-goodies --noconfirm
 elif [[ $vm_setting == 2 ]]; then
   pacman -S plasma plasma-meta --noconfirm
 elif [[ $vm_setting == 3 ]]; then  
   pacman -S  lxqt
+elif [[ $vm_setting == 4 ]]; then
+ pacman -S deepin deepin-extra
+elif [[ $vm_setting == 5 ]]; then
+ pacman -S gnome gnome-extra
+elif [[ $vm_setting == 6 ]]; then
+ pacman -S cinnamon
 fi
 
 echo 'Какой ставим DM ?'
