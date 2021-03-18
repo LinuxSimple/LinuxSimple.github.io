@@ -75,7 +75,7 @@ elif [[ $vm_setting == 4 ]]; then
 elif [[ $vm_setting == 5 ]]; then
  pacman -S gnome gnome-extra
 elif [[ $vm_setting == 6 ]]; then
- pacman -S cinnamon cinnamon-translations gnome-terminal
+ pacman -S cinnamon cinnamon-translations gnome-terminal xdg-user-dirs
 fi
 
 echo 'Какой ставим DM ?'
