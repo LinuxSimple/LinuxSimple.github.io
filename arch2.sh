@@ -79,7 +79,7 @@ elif [[ $vm_setting == 6 ]]; then
 fi
 
 echo 'Какой ставим DM ?'
-read -p "1 - sddm, 2 - lxdm, 3 - lightdm: " dm_setting
+read -p "1 - sddm, 2 - lxdm, 3 - lightdm 4 - gdm: " dm_setting
 if [[ $dm_setting == 1 ]]; then
   pacman -Sy sddm sddm-kcm --noconfirm
   systemctl enable sddm.service -f
@@ -89,7 +89,8 @@ elif [[ $dm_setting == 2 ]]; then
  elif [[ $dm_setting == 3 ]]; then
   pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
   systemctl enable lightdm.service
- 
+  elif [[ $dm_setting == 4 ]]; then
+  systemctl enable gdm
 fi
 
 echo 'Ставим шрифты'
