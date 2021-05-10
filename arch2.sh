@@ -65,7 +65,7 @@ pacman -S $gui_install
 echo "Какое DE ставим?"
 read -p "1 - XFCE, 2 - KDE, 3 - Lxqt, 4 - deepin, 5 - gnome 6 - cinnamon: " vm_setting
 if [[ $vm_setting == 1 ]]; then
-  pacman -S xfce4 xfce4-goodies --noconfirm
+  pacman -S xfce4 xfce4-goodies xdg-user-dirs --noconfirm
 elif [[ $vm_setting == 2 ]]; then
   pacman -S plasma plasma-meta --noconfirm
 elif [[ $vm_setting == 3 ]]; then  
@@ -105,7 +105,7 @@ systemctl enable NetworkManager
 echo 'Настраиваем звук и необходимые программы'
 pacman -S pulseaudio --noconfirm
 pacman -S pavucontrol --noconfirm
-pacman -S htop gvfs-mtp mtpfs xdg-user-dirs nano p7zip unrar wget git gtk2 noto-fonts-emoji --noconfirm
+pacman -S htop gvfs-mtp mtpfs nano p7zip unrar wget git gtk2 noto-fonts-emoji --noconfirm
 
 echo 'CИСТЕМА УСТАНОВЛЕНА, ПЕРЕЗАГРУЗИТЕ КОМПЬЮТЕР'
 exit
