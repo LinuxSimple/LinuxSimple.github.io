@@ -68,7 +68,7 @@ if [[ $vm_setting == 1 ]]; then
   pacman -S xfce4 xfce4-goodies xdg-user-dirs --noconfirm
 elif [[ $vm_setting == 2 ]]; then
   pacman -S plasma-desktop sddm-kcm powerdevil konsole plasma-pa
- dolphin --noconfirm
+ dolphin kwalletmanager --noconfirm
 elif [[ $vm_setting == 3 ]]; then  
   pacman -S  lxqt
 elif [[ $vm_setting == 4 ]]; then
