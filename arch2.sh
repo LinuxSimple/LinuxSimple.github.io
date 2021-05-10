@@ -105,7 +105,7 @@ systemctl enable NetworkManager
 echo 'Настраиваем звук и необходимые программы'
 pacman -S pulseaudio --noconfirm
 pacman -S pavucontrol --noconfirm
-pacman -S htop ffmpegthumbs nano p7zip unrar wget git gtk2 noto-fonts-emoji --noconfirm
+pacman -S htop gvfs-mtp mtpfs xdg-user-dirs nano p7zip unrar wget git gtk2 noto-fonts-emoji --noconfirm
 
 echo 'CИСТЕМА УСТАНОВЛЕНА, ПЕРЕЗАГРУЗИТЕ КОМПЬЮТЕР'
 exit
