@@ -32,11 +32,20 @@ fdisk -l
 
 echo '2.4.2 Форматирование дисков'
 
-mkfs.ext4 /dev/sda1 -L root
+mkfs.btrfs -f /dev/sda1
 
 echo '2.4.3 Монтирование дисков'
 
 mount /dev/sda1 /mnt
+btrfs subvolume create /mnt/sv_root
+btrfs subvolume create /mnt/sv_home
+btrfs subvolume create /mnt/sv_snapshots
+umount /mnt
+mount -o subvol=sv_root,compress=lzo,autodefrag /dev/sda1 /mnt
+mkdir /mnt/home
+mount -o subvol=sv_home,compress=lzo,autodefrag /dev/sda1 /mnt/home
+mkdir /mnt/snapshots
+mount -o subvol=sv_snapshots,compress=lzo,autodefrag /dev/sda1 /mnt/snapshots
 
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
