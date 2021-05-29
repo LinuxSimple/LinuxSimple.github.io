@@ -103,7 +103,7 @@ echo 'Подключаем автозагрузку менеджера вход�
 systemctl enable NetworkManager
 
 echo 'Настраиваем звук и необходимые программы'
-pacman -S pipewire --noconfirm
+pacman -S pulseaudio --noconfirm
 pacman -S pavucontrol --noconfirm
 pacman -S htop gvfs-mtp mtpfs nano p7zip unrar wget git gtk2 noto-fonts-emoji xdg-user-dirs --noconfirm
 
