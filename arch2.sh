@@ -102,9 +102,7 @@ pacman -S networkmanager network-manager-applet ppp --noconfirm
 echo 'Подключаем автозагрузку менеджера входа и интернет'
 systemctl enable NetworkManager
 
-echo 'Настраиваем звук и необходимые программы'
-pacman -S pulseaudio --noconfirm
-pacman -S pavucontrol --noconfirm
+echo 'Настраиваем необходимые программы'
 pacman -S htop gvfs-mtp mtpfs nano p7zip unrar wget git gtk2 noto-fonts-emoji xdg-user-dirs --noconfirm
 
 echo 'CИСТЕМА УСТАНОВЛЕНА, ПЕРЕЗАГРУЗИТЕ КОМПЬЮТЕР'
