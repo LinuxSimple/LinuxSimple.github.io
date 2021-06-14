@@ -43,7 +43,7 @@ btrfs subvolume create /mnt/sv_root
 umount /mnt
 
 mount -o subvol=sv_root,compress=lzo,autodefrag /dev/sda1 /mnt
-#mount -o subvol=sv_root,noatime,compress=zstd,autodefrag /dev/sda1 /mnt
+#mount -o subvol=sv_root,noatime,nodiratime,compress=zstd,autodefrag /dev/sda1 /mnt
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
 echo "Server = http://mirror.mirohost.net/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
