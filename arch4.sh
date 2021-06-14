@@ -2,11 +2,11 @@ loadkeys ru
 
 setfont cyr-sun16
 
-echo '2.3 Ñèíõğîíèçàöèÿ ñèñòåìíûõ ÷àñîâ'
+echo '2.3 Ğ¡Ğ¸Ğ½Ñ…Ñ€Ğ¾Ğ½Ğ¸Ğ·Ğ°Ñ†Ğ¸Ñ ÑĞ¸ÑÑ‚ĞµĞ¼Ğ½Ñ‹Ñ… Ñ‡Ğ°ÑĞ¾Ğ²'
 
 timedatectl set-ntp true
 
-echo '2.4 ñîçäàíèå ğàçäåëîâ'
+echo '2.4 ÑĞ¾Ğ·Ğ´Ğ°Ğ½Ğ¸Ğµ Ñ€Ğ°Ğ·Ğ´ĞµĞ»Ğ¾Ğ²'
 
 (
 
@@ -26,27 +26,27 @@ echo w;
 
 ) | fdisk /dev/sda
 
-echo 'Âàøà ğàçìåòêà äèñêà'
+echo 'Ğ’Ğ°ÑˆĞ° Ñ€Ğ°Ğ·Ğ¼ĞµÑ‚ĞºĞ° Ğ´Ğ¸ÑĞºĞ°'
 
 fdisk -l
 
-echo '2.4.2 Ôîğìàòèğîâàíèå äèñêîâ'
+echo '2.4.2 Ğ¤Ğ¾Ñ€Ğ¼Ğ°Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ´Ğ¸ÑĞºĞ¾Ğ²'
 
 mkfs.ext4 /dev/sda1 -L root
 
-echo '2.4.3 Ìîíòèğîâàíèå äèñêîâ'
+echo '2.4.3 ĞœĞ¾Ğ½Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ´Ğ¸ÑĞºĞ¾Ğ²'
 
 mount /dev/sda1 /mnt
 #mount -o nodiratime,noatime /dev/sda1 /mnt
-echo '3.1 Âûáîğ çåğêàë äëÿ çàãğóçêè. Ñòàâèì çåğêàëî'
+echo '3.1 Ğ’Ñ‹Ğ±Ğ¾Ñ€ Ğ·ĞµÑ€ĞºĞ°Ğ» Ğ´Ğ»Ñ Ğ·Ğ°Ğ³Ñ€ÑƒĞ·ĞºĞ¸. Ğ¡Ñ‚Ğ°Ğ²Ğ¸Ğ¼ Ğ·ĞµÑ€ĞºĞ°Ğ»Ğ¾'
 
 echo "Server = http://mirror.mirohost.net/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 
-echo '3.2 Óñòàíîâêà îñíîâíûõ ïàêåòîâ'
+echo '3.2 Ğ£ÑÑ‚Ğ°Ğ½Ğ¾Ğ²ĞºĞ° Ğ¾ÑĞ½Ğ¾Ğ²Ğ½Ñ‹Ñ… Ğ¿Ğ°ĞºĞµÑ‚Ğ¾Ğ²'
 
 pacstrap /mnt base base-devel linux-lts linux-firmware
 
-echo '3.3 Íàñòğîéêà ñèñòåìû'
+echo '3.3 ĞĞ°ÑÑ‚Ñ€Ğ¾Ğ¹ĞºĞ° ÑĞ¸ÑÑ‚ĞµĞ¼Ñ‹'
 
 genfstab -pU /mnt >> /mnt/etc/fstab
 
