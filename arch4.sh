@@ -37,7 +37,7 @@ mkfs.ext4 /dev/sda1 -L root
 echo '2.4.3 Монтирование дисков'
 
 mount /dev/sda1 /mnt
-#mount -o nodiratime,noatime /dev/sda1 /mnt
+
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
 echo "Server = http://mirror.mirohost.net/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
