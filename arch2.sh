@@ -69,7 +69,7 @@ if [[ $vm_setting == 1 ]]; then
 elif [[ $vm_setting == 2 ]]; then
   pacman -S plasma-desktop sddm-kcm powerdevil konsole plasma-pa --noconfirm
 elif [[ $vm_setting == 3 ]]; then  
-  pacman -S  lxqt
+  pacman -S lxqt oxygen
 elif [[ $vm_setting == 4 ]]; then
  pacman -S deepin deepin-extra
 elif [[ $vm_setting == 5 ]]; then
