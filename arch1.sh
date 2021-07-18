@@ -32,7 +32,7 @@ fdisk -l
 
 echo '2.4.2 Форматирование дисков'
 
-mkfs.ext4 /dev/sda1 -L root
+mkfs.ext4 /dev/sda1
 
 echo '2.4.3 Монтирование дисков'
 
