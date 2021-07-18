@@ -20,7 +20,7 @@ echo;
 
 echo;
 
-echo +10G;
+echo +20G;
 
 echo n;
 
@@ -30,7 +30,7 @@ echo;
 
 echo;
 
-echo +20G;
+echo +50G;
 
 echo w;
 
@@ -42,9 +42,9 @@ fdisk -l
 
 echo '2.4.2 Форматирование дисков'
 
-mkfs.ext4 /dev/sda1 -L root
+mkfs.ext4 /dev/sda1
 
-mkfs.ext4 /dev/sda2 -L home
+mkfs.ext4 /dev/sda2
 
 echo '2.4.3 Монтирование дисков'
 
