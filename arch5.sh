@@ -32,7 +32,7 @@ fdisk -l
 
 echo '2.4.2 Форматирование дисков'
 
-mkfs.btrfs -f /dev/sda1 -L Том
+mkfs.btrfs -f /dev/sda1 -L Диск
 
 echo '2.4.3 Монтирование дисков'
 
