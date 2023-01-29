@@ -20,11 +20,11 @@ echo;
 
 echo;
 
-echo +28G;
+echo +50G;
 
 echo w;
 
-) | fdisk /dev/sdс
+) | fdisk /dev/sda
 
 echo 'Ваша разметка диска'
 
@@ -32,7 +32,7 @@ fdisk -l
 
 echo '2.4.2 Форматирование дисков'
 
-mkfs.ext4 /dev/sdс1 -L Том
+mkfs.ext4 /dev/sda1 -L Том
 
 echo '2.4.3 Монтирование дисков'
 
