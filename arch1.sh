@@ -20,11 +20,11 @@ echo;
 
 echo;
 
-echo +28G;
+echo +50G;
 
 echo w;
 
-) | fdisk /dev/sdc
+) | fdisk /dev/sda
 
 echo 'Ваша разметка диска'
 
@@ -32,11 +32,11 @@ fdisk -l
 
 echo '2.4.2 Форматирование дисков'
 
-mkfs.ext4 /dev/sdc2 -L Том
+mkfs.ext4 /dev/sda1 -L Том
 
 echo '2.4.3 Монтирование дисков'
 
-mount /dev/sdc2 /mnt
+mount /dev/sda1 /mnt
 
 #mount -o nodiratime,noatime /dev/sda1 /mnt
 
