@@ -20,11 +20,11 @@ echo;
 
 echo;
 
-echo +50G;
+echo +30G;
 
 echo w;
 
-) | fdisk /dev/sda
+) | fdisk /dev/sdc
 
 echo 'Ваша разметка диска'
 
@@ -32,11 +32,11 @@ fdisk -l
 
 echo '2.4.2 Форматирование дисков'
 
-mkfs.ext4 /dev/sda1 -L Том
+mkfs.ext4 /dev/sdc1 -L Том
 
 echo '2.4.3 Монтирование дисков'
 
-mount /dev/sda1 /mnt
+mount /dev/sdc1 /mnt
 
 #mount -o nodiratime,noatime /dev/sdc1 /mnt
 
@@ -46,7 +46,7 @@ echo "Server = http://mirror.mirohost.net/archlinux/\$repo/os/\$arch" > /etc/pac
 
 echo '3.2 Установка основных пакетов'
 
-pacstrap /mnt base base-devel linux-lts linux-firmware
+pacstrap /mnt base base-devel linux linux-firmware
 
 echo '3.3 Настройка системы'
 
