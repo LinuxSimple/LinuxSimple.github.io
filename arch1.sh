@@ -36,7 +36,7 @@ mkfs.ext4 /dev/sdb1 -L Том
 
 echo '2.4.3 Монтирование дисков'
 
-mount /dev/sdc1 /mnt
+mount /dev/sdb1 /mnt
 
 #mount -o nodiratime,noatime /dev/sdb1 /mnt
 
