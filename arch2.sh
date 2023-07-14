@@ -94,7 +94,7 @@ elif [[ $dm_setting == 2 ]]; then
 fi
 
 echo 'Ставим шрифты'
-pacman -S ttf-liberation ttf-dejavu --noconfirm 
+pacman -S ttf-dejavu --noconfirm 
 
 echo 'Ставим сеть'
 pacman -S networkmanager network-manager-applet ppp --noconfirm
@@ -103,7 +103,7 @@ echo 'Подключаем автозагрузку менеджера вход�
 systemctl enable NetworkManager
 
 echo 'Настраиваем необходимые программы'
-pacman -S htop gvfs-mtp mtpfs nano p7zip unrar wget git gtk2 noto-fonts-emoji xdg-user-dirs --noconfirm
+pacman -S htop gvfs-mtp mtpfs nano wget git noto-fonts-emoji xdg-user-dirs --noconfirm
 
 echo 'CИСТЕМА УСТАНОВЛЕНА, ПЕРЕЗАГРУЗИТЕ КОМПЬЮТЕР'
 exit
