@@ -8,21 +8,21 @@ timedatectl set-ntp true
 
 echo '2.4 создание разделов'
 
-#(
+(
 
-#echo o;
+echo o;
 
-#echo n;
+echo n;
 
-#echo;
+echo;
 
-#echo;
+echo;
 
-#echo;
+echo;
 
-#echo +51200M;
+echo +51200M;
 
-#echo w;
+echo w;
 
 ) | fdisk /dev/sda
 
@@ -42,7 +42,7 @@ btrfs subvolume create /mnt/sv_root
 
 umount /mnt
 
-mount -o subvol=sv_root,compress=zstd,autodefrag /dev/sda1 /mnt
+mount -o subvol=sv_root,compress=lzo,autodefrag /dev/sda1 /mnt
 
 echo '3.1 Выбор зеркал для загрузки. Ставим зеркало'
 
