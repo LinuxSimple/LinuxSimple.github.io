@@ -8,21 +8,21 @@ timedatectl set-ntp true
 
 echo '2.4 создание разделов'
 
-(
+#(
 
-echo o;
+#echo o;
 
-echo n;
+#echo n;
 
-echo;
+#echo;
 
-echo;
+#echo;
 
-echo;
+#echo;
 
-echo +51200M;
+#echo +51200M;
 
-echo w;
+#echo w;
 
 ) | fdisk /dev/sda
 
