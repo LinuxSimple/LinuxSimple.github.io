@@ -107,8 +107,6 @@ pacman -S htop gvfs-mtp mtpfs nano wget git noto-fonts-emoji
 
 echo 'Ставим звук'
 pacman -S pulseaudio pavucontrol pulseaudio-equalizer-ladspa
-
-echo 'Ставим мульимедиа'
-pacman -S vlc transmission-cli transmission-gtk
+ 
 echo 'CИСТЕМА УСТАНОВЛЕНА, ПЕРЕЗАГРУЗИТЕ КОМПЬЮТЕР'
 exit
