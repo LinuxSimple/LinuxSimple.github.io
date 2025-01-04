@@ -46,7 +46,7 @@ echo "Server = http://mirror.mirohost.net/archlinux/\$repo/os/\$arch" > /etc/pac
 
 echo '3.2 Установка основных пакетов'
 
-pacstrap /mnt base base-devel linux linux-firmware linux-headers
+pacstrap /mnt base base-devel linux-lts linux-firmware linux-lts-headers
 
 echo '3.3 Настройка системы'
 
