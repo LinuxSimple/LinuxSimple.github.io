@@ -107,6 +107,18 @@ pacman -S --noconfirm xfce4 xfce4-goodies lightdm lightdm-gtk-greeter
 systemctl enable lightdm
 systemctl enable NetworkManager
 
+echo 'Ставим сеть'
+pacman -S networkmanager network-manager-applet ppp --noconfirm
+
+echo 'Ставим шрифты'
+pacman -S ttf-dejavu --noconfirm
+
+echo 'Ставим звук'
+pacman -S pulseaudio pavucontrol pulseaudio-equalizer-ladspa
+
+echo 'Настраиваем необходимые программы'
+pacman -S htop gvfs-mtp mtpfs file-roller nano wget git noto-fonts-emoji
+
 echo "[11/12] Чистка и оптимизация"
 pacman -S --noconfirm gvfs gvfs-smb pavucontrol alsa-utils
 EOF
