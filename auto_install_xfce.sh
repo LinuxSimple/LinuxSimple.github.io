@@ -1,6 +1,6 @@
 #!/bin/bash
 # Автоустановка Arch Linux с / в ext4, сохранением /home (btrfs) и XFCE4
-# Запускать из Live Arch: bash arch_auto_install_xfce.sh
+# Запускать из Live Arch: bash auto_install_xfce.sh
 
 HOSTNAME="arch-pc"
 USERNAME="vanya"
