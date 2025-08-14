@@ -3,7 +3,7 @@
 # Запускать из Live Arch: bash auto_install_xfce.sh
 
 HOSTNAME="arch-pc"
-USERNAME="vanya"
+USERNAME="alex"
 USER_UID=1000
 USER_GID=1000
 TIMEZONE="Europe/Kyiv"
