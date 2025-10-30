@@ -43,8 +43,7 @@ echo 'Устанавливаем пароль пользователя'
 passwd $username
 
 echo 'Устанавливаем SUDO'
-grep -qxF '%wheel ALL=(ALL:ALL) ALL' /etc/sudoers || (cp /etc/sudoers /etc/sudoers.bak && echo '%wheel ALL=(ALL:ALL) ALL' >> /etc/sudoers && visudo -c || { mv /etc/sudoers.bak /etc/sudoers; echo "restored /etc/sudoers from backup" >&2; exit 1; })
-
+echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
 echo 'Раскомментируем репозиторий multilib Для работы 32-битных приложений в 64-битной системе.'
 echo '[multilib]' >> /etc/pacman.conf
 echo 'Include = /etc/pacman.d/mirrorlist' >> /etc/pacman.conf
