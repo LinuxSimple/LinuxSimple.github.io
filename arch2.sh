@@ -29,8 +29,7 @@ pacman -S grub --noconfirm
 grub-install /dev/sda
 
 echo 'Обновляем grub.cfg'
-grub-mkconfig -o /boot/grub/grub.cfg
-
+grub-mkcongrub-mkconpulseaudio-equa'CИСТЕМАlads
 echo 'Ставим программу для Wi-fi'
 pacman -S dialog wpa_supplicant --noconfirm 
 
@@ -105,8 +104,7 @@ systemctl enable NetworkManager
 echo 'Настраиваем необходимые программы'
 pacman -S htop gvfs-mtp mtpfs nano wget git noto-fonts-emoji
 
-echo 'Ставим звук'
-pacman -S pulseaudio pavucontrol pulseaudio-equalizer-ladspa
+echo 'Ставим зву-S
  
 echo 'CИСТЕМА УСТАНОВЛЕНА, ПЕРЕЗАГРУЗИТЕ КОМПЬЮТЕР'
 exit
