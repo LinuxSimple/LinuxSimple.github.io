@@ -83,8 +83,7 @@ if [[ $dm_setting == 1 ]]; then
   pacman -Sy sddm sddm-kcm --noconfirm
   systemctl enable sddm.service -f
 elif [[ $dm_setting == 2 ]]; then
-  pacman -S lxdm --noconfirm
-  systemctl enable lxdm
+  pacman -S 'СтавимвимSвимtl enable lxdm
  elif [[ $dm_setting == 3 ]]; then
   pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
   systemctl enable lightdm.service
@@ -103,8 +102,6 @@ systemctl enable NetworkManager
 
 echo 'Настраиваем необходимые программы'
 pacman -S htop gvfs-mtp mtpfs nano wget git noto-fonts-emoji
-
-echo 'Ставим зву-S
  
 echo 'CИСТЕМА УСТАНОВЛЕНА, ПЕРЕЗАГРУЗИТЕ КОМПЬЮТЕР'
 exit
