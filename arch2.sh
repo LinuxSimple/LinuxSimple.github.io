@@ -43,8 +43,7 @@ echo 'Устанавливаем пароль пользователя'
 passwd $username
 
 echo 'Устанавливаем SUDO'
-#echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
-echo '%wheel ALL=\(ALL\) ALL' >> /etc/sudoers
+echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
 
 echo 'Раскомментируем репозиторий multilib Для работы 32-битных приложений в 64-битной системе.'
 echo '[multilib]' >> /etc/pacman.conf
